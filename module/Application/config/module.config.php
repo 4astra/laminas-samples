@@ -8,6 +8,7 @@ use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 use Album\Controller\AlbumController;
+use Blog\Controller\ListController;
 
 return [
     'router' => [
@@ -28,6 +29,16 @@ return [
                     'route'    => '/',
                     'defaults' => [
                         'controller' => AlbumController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+            'blog' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/',
+                    'defaults' => [
+                        'controller' => ListController::class,
                         'action'     => 'index',
                     ],
                 ],
