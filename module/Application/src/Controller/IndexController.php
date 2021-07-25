@@ -6,6 +6,7 @@ namespace Application\Controller;
 
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
+use Laminas\I18n\Translator\Translator;
 
 class IndexController extends AbstractActionController
 {

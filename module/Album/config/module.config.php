@@ -36,4 +36,14 @@ return [
             'album' => __DIR__ . '/../view',
         ],
     ],
+    'translator' => [
+        // 'locale' => 'de_DE',
+        'translation_file_patterns' => [
+            [
+                'type'     => 'gettext',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s.mo',
+            ],
+        ],
+    ],
 ];
