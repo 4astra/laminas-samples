@@ -52,6 +52,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
-    vb.customize ["modifyvm", :id, "--name", "Laminas MVC Skeleton - Ubuntu 18.04"]
+    vb.customize ["modifyvm", :id, "--name", "FarmGo - Ubuntu 18.04"]
   end
 end

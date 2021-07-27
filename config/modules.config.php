@@ -17,5 +17,6 @@ return [
     'Laminas\Validator',
     'Application',
     'Blog',
-    'Album'
+    'Album',
+    'Authen'
 ];

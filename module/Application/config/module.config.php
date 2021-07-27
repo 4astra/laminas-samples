@@ -8,6 +8,7 @@ use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 use Album\Controller\AlbumController;
+use Authen\Controller\AuthenController;
 use Blog\Controller\ListController;
 
 return [
@@ -23,6 +24,16 @@ return [
             //         ],
             //     ],
             // ],
+            'authen' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/',
+                    'defaults' => [
+                        'controller' => AuthenController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
             'home' => [
                 'type' => Literal::class,
                 'options' => [

@@ -1,6 +1,6 @@
 {
     "name": "laminas/laminas-mvc-skeleton",
-    "description": "Laminas MVC Skeleton Application",
+    "description": "FarmGo",
     "type": "project",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -20,13 +20,15 @@
         "laminas/laminas-form": "^3.0",
         "laminas/laminas-i18n": "^2.11",
         "laminas/laminas-mvc-i18n": "^1.2",
-        "laminas/laminas-navigation": "^2.11"
+        "laminas/laminas-navigation": "^2.11",
+        "laminas/laminas-authentication": "^2.8"
     },
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
             "Blog\\": "module/Blog/src/",
-            "Album\\": "module/Album/src/"
+            "Album\\": "module/Album/src/",
+            "Authen\\": "module/Authen/src/"
         }
     },
     "autoload-dev": {

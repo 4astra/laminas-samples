@@ -2,7 +2,7 @@ FROM php:7.3-apache
 
 LABEL maintainer="getlaminas.org" \
     org.label-schema.docker.dockerfile="/Dockerfile" \
-    org.label-schema.name="Laminas MVC Skeleton" \
+    org.label-schema.name="FarmGo" \
     org.label-schema.url="https://docs.getlaminas.org/mvc/" \
     org.label-schema.vcs-url="https://github.com/laminas/laminas-mvc-skeleton"
 
