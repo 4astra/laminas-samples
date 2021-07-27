@@ -3,16 +3,8 @@
 namespace Album;
 
 use Laminas\Router\Http\Segment;
-// use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
-    // 'controllers' => [
-    //     'factories' => [
-    //         Controller\AlbumController::class => InvokableFactory::class,
-    //     ],
-    // ],
-
-    // The following section is new and should be added to your file:
     'router' => [
         'routes' => [
             'album' => [
@@ -35,15 +27,5 @@ return [
         'template_path_stack' => [
             'album' => __DIR__ . '/../view',
         ],
-    ],
-    'translator' => [
-        // 'locale' => 'de_DE',
-        'translation_file_patterns' => [
-            [
-                'type'     => 'gettext',
-                'base_dir' => __DIR__ . '/../language',
-                'pattern'  => '%s.mo',
-            ],
-        ],
-    ],
+    ]
 ];

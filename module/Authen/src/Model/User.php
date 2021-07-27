@@ -5,6 +5,7 @@ namespace Authen\Model;
 use DomainException;
 use Laminas\Filter\StringTrim;
 use Laminas\Filter\StripTags;
+use Laminas\I18n\Translator\Translator;
 use Laminas\InputFilter\InputFilter;
 use Laminas\InputFilter\InputFilterAwareInterface;
 use Laminas\InputFilter\InputFilterInterface;
@@ -16,6 +17,13 @@ class User implements InputFilterAwareInterface
     public $username;
     public $password;
     private $inputFilter;
+
+    private $translator;
+
+    public function __construct()
+    {
+        $this->translator = new Translator();
+    }
 
     public function exchangeArray(array $data)
     {
@@ -48,24 +56,24 @@ class User implements InputFilterAwareInterface
                 ['name' => StringTrim::class],
             ],
             'validators' => [
-                [
-                    'name' => StringLength::class,
-                    'options' => [
-                        'encoding' => 'UTF-8',
-                        'min' => 2,
-                        'max' => 100,
-                        'messages' => [
-                            StringLength::TOO_SHORT => 'Username is too short'
-                        ]
-                    ],
+                // [
+                //     'name' => StringLength::class,
+                //     'options' => [
+                //         'encoding' => 'UTF-8',
+                //         'min' => 2,
+                //         'max' => 100,
+                //         'messages' => [
+                //             StringLength::TOO_SHORT => 'Username is too short'
+                //         ]
+                //     ],
 
-                ],
+                // ],
                 [
                     'name' => NotEmpty::class,
                     'options' => [
                         'encoding' => 'UTF-8',
                         'messages' => [
-                            NotEmpty::IS_EMPTY => 'Please enter your username'
+                            NotEmpty::IS_EMPTY => $this->translator->translate('require_username')
                         ]
                     ]
                 ]
@@ -85,7 +93,7 @@ class User implements InputFilterAwareInterface
                     'options' => [
                         'encoding' => 'UTF-8',
                         'messages' => [
-                            NotEmpty::IS_EMPTY => 'Please enter your password'
+                            NotEmpty::IS_EMPTY => $this->translator->translate('require_password')
                         ]
                     ]
                 ]

@@ -3,7 +3,7 @@
 /**
  * @var Laminas\View\Renderer\PhpRenderer $this
  */
-$title = 'Login';
+$title = $this->translate('login');
 $this->headTitle($title);
 ?>
 <h1><?= $this->escapeHtml($title) ?></h1>
@@ -11,12 +11,12 @@ $this->headTitle($title);
 
 $username = $form->get('username');
 $username->setAttribute('class', 'form-control');
-$username->setAttribute('placeholder', 'Username');
+$username->setAttribute('placeholder', $this->translate('username'));
 
 
 $password = $form->get('password');
 $password->setAttribute('class', 'form-control');
-$password->setAttribute('placeholder', 'Password');
+$password->setAttribute('placeholder', $this->translate('password'));
 
 $submit = $form->get('submit');
 $submit->setAttribute('class', 'btn btn-primary');

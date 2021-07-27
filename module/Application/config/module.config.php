@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Application;
 
 use Laminas\Router\Http\Literal;
@@ -14,16 +12,6 @@ use Blog\Controller\ListController;
 return [
     'router' => [
         'routes' => [
-            // 'home' => [
-            //     'type'    => Literal::class,
-            //     'options' => [
-            //         'route'    => '/',
-            //         'defaults' => [
-            //             'controller' => Controller\IndexController::class,
-            //             'action'     => 'index',
-            //         ],
-            //     ],
-            // ],
             'authen' => [
                 'type' => Literal::class,
                 'options' => [
@@ -89,12 +77,9 @@ return [
     ],
 
     'translator' => [
-        'locale' => 'de_DE',
+        'locale' => 'vi_VI',
         'translation_file_patterns' => [
             [
-                // 'type'     => 'gettext',
-                // 'base_dir' => __DIR__ . '/../language',
-                // 'pattern'  => '%s.mo',
                 'type' => 'phparray',
                 'base_dir' => __DIR__ . '/../language',
                 'pattern' => '%s.php'

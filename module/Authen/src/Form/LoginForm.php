@@ -3,13 +3,15 @@
 namespace Authen\Form;
 
 use Laminas\Form\Form;
+use Laminas\I18n\Translator\Translator;
 
 class LoginForm extends Form
 {
+
     public function __construct($name = null)
     {
-        // We will ignore the name provided to the constructor
         parent::__construct('user');
+        $translator = new Translator();
 
         $this->add([
             'name' => 'id',
@@ -19,14 +21,14 @@ class LoginForm extends Form
             'name' => 'username',
             'type' => 'text',
             'options' => [
-                'label' => 'Username',
+                'label' => $translator->translate('username'),
             ],
         ]);
         $this->add([
             'name' => 'password',
             'type' => 'password',
             'options' => [
-                'label' => 'Password',
+                'label' => $translator->translate('password'),
             ],
         ]);
         // $this->add([
@@ -40,7 +42,7 @@ class LoginForm extends Form
             'name' => 'submit',
             'type' => 'submit',
             'attributes' => [
-                'value' => 'Go',
+                'value' => $translator->translate('go'),
                 'id'    => 'submitbutton',
             ],
         ]);

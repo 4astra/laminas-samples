@@ -28,4 +28,14 @@ return [
             'authen' => __DIR__ . '/../view',
         ],
     ],
+    'translator' => [
+        'locale' => 'vi_VI',
+        'translation_file_patterns' => [
+            [
+                'type' => 'phparray',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern' => '%s.php'
+            ],
+        ],
+    ],
 ];
