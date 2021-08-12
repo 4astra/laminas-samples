@@ -60,8 +60,23 @@ INSERT INTO
 VALUES
     ('Gotye', 'Making Mirrors');
 
-CREATE TABLE user (
+CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username VARCHAR(50) UNIQUE NOT NULL,
     password VARCHAR(32) NULL
-)
+);
+
+INSERT INTO
+    users (username, password)
+VALUES
+    ('username', 'password');
+
+INSERT INTO
+    users (username, password)
+VALUES
+    ('username1', 'password1');
+
+INSERT INTO
+    users (username, password)
+VALUES
+    ('abc', 'abc');
