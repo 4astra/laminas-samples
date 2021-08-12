@@ -6,6 +6,8 @@
  * This should be an array of module namespaces used in the application.
  */
 return [
+    'Laminas\Mvc\Plugin\FlashMessenger',
+    'Laminas\Session',
     'Laminas\Mvc\I18n',
     'Laminas\Navigation',
     'Laminas\I18n',

@@ -25,8 +25,8 @@ class Module implements ConfigProviderInterface
                 Model\AuthenTableGateway::class => function ($container) {
                     $dbAdapter = $container->get(AdapterInterface::class);
                     $resultSetPrototype = new ResultSet();
-                    $resultSetPrototype->setArrayObjectPrototype(new Model\User());
-                    return new TableGateway('user', $dbAdapter, null, $resultSetPrototype);
+                    $resultSetPrototype->setArrayObjectPrototype(new Model\Login());
+                    return new TableGateway('users', $dbAdapter, null, $resultSetPrototype);
                 },
             ],
         ];

@@ -12,7 +12,7 @@ use Laminas\InputFilter\InputFilterInterface;
 use Laminas\Validator\StringLength;
 use Laminas\Validator\NotEmpty;
 
-class User implements InputFilterAwareInterface
+class Login implements InputFilterAwareInterface
 {
     public $username;
     public $password;
@@ -27,7 +27,6 @@ class User implements InputFilterAwareInterface
 
     public function exchangeArray(array $data)
     {
-
         $this->username = !empty($data['username']) ? $data['username'] : null;
         $this->password  = !empty($data['password']) ? $data['password'] : null;
     }
